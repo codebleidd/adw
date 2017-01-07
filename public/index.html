@@ -14,28 +14,28 @@
 
     <title>Magdalena Kołodziejczyk</title>
   </head>
-  <body ng-app="MKApp">
+  <body>
 
-    <header ng-controller="MainPageController as main">
+    <header ui-sref="bla"ng-controller="MKAppController as main"  ng-cloak>
       {{ main.helloMessage }}
     </header>
 
     <!-- RequireJS -->
-    <script data-main="src/main" src="lib/require.js" charset="utf-8"></script>
+    <script data-main="src/main" src="/src/lib/requirejs/require.js" charset="utf-8"></script>
     <!-- AngularJS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script> -->
 
     <!-- Firebase -->
     <!-- <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script> -->
 
     <!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script>
+    <!-- <script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script> -->
 
     <!-- App module -->
-    <script src="app/MKApp.module.js" charset="utf-8"></script>
+    <!-- <script src="app/MKApp.module.js" charset="utf-8"></script> -->
 
     <!-- MKApp Controller -->
-    <script src="app/public/MKApp.controller.js" charset="utf-8"></script>
+    <!-- <script src="app/public/MKApp.controller.js" charset="utf-8"></script> -->
 
 
 

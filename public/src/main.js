@@ -1,20 +1,34 @@
 // Require Configuration
 requirejs.config({
-  baseUrl: 'lib/',
+  baseUrl: 'src/lib',
   paths: {
-    app: '../app',
-    helpers: '../src/helpers',
-    firebase: 'https://www.gstatic.com/firebasejs/3.6.4/firebase',
-    jquery : 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min',
-    angular : 'https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min',
-    angularFire: 'https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min'
+    'app': '../app',
+    'helpers': '../helpers',
+    'firebase': 'https://www.gstatic.com/firebasejs/3.6.4/firebase',
+    'jquery' : 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min',
+    'angular' : 'angularjs/angular',
+    'angularFire': 'angularjs/angularfire',
+    'uiRouter': 'angularjs/angular-ui',
+    'public': '../app/public'
   },
   shim: {
-    angular : {'exports' : 'angular'},
-    firebase: {
-      exports: 'firebase'
+    'angular' : {
+      'exports' : 'angular'
     },
-    bootstrap : { "deps" :['jquery'] }
+    'angularFire': {
+      'deps': ['angular', 'firebase'],
+      'exports' : 'angularFire'
+    },
+    'uiRouter': {
+      'deps': ['angular'],
+      'exports' : 'uiRouter'
+    },
+    'firebase': {
+      'exports': 'firebase'
+    },
+    'bootstrap' : {
+      "deps": ['jquery']
+    }
   }
 });
 
@@ -22,13 +36,9 @@ requirejs.config({
 
 requirejs(['firebase', 'helpers/firebase_config', 'jquery', 'bootstrap'], function (firebase, firebaseConfig, $, bootstrap) {
   firebase.initializeApp(firebaseConfig.config);
-  // requirejs(['angular'], function (angular) {
-  //   requirejs(['angularFire'], function (angularFire) {
-  //     // requirejs(['app/MKApp.module'], function (MKApp) {
-  //       requirejs(['app/public/MKApp.controller'], function () {
-  //         angular.bootstrap(document, ['MKApp'])
-  //       });
-  //     // });
-  //   });
-  // });
+  requirejs(['app/MKApp.module'], function (MKApp) {
+    // var appModule = 'appModule';
+    // angular.module(appModule, [MKApp]);
+    // angular.bootstrap(document.getElementsByTagName("body")[0], [ appModule ]);
+  });
 });
