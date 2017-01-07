@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Adwokat Magdalena Kołodziejczyk">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png">
+
+    <!-- Bootstrap files -->
+    <link rel="stylesheet" href="styles/lib/bootstrap.css">
+    <!-- Custom CSS styles  -->
+    <link rel="stylesheet" href="styles/application.css">
+
+    <title>Magdalena Kołodziejczyk</title>
+  </head>
+  <body ng-app="MKApp">
+
+    <header ng-controller="MainPageController as main">
+      {{ main.helloMessage }}
+    </header>
+
+    <!-- RequireJS -->
+    <script data-main="src/main" src="lib/require.js" charset="utf-8"></script>
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+    <!-- Firebase -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script> -->
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script>
+
+    <!-- App module -->
+    <script src="app/MKApp.module.js" charset="utf-8"></script>
+
+    <!-- MKApp Controller -->
+    <script src="app/public/MKApp.controller.js" charset="utf-8"></script>
+
+
+
+  </body>
+</html>
