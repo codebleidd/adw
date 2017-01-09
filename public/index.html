@@ -9,35 +9,62 @@
 
     <!-- Bootstrap files -->
     <link rel="stylesheet" href="styles/lib/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="styles/lib/font-awesome.min.css">
     <!-- Custom CSS styles  -->
     <link rel="stylesheet" href="styles/application.css">
 
     <title>Magdalena Kołodziejczyk</title>
   </head>
   <body>
+    <header ng-controller="mkAppController as main" ng-cloak>
+      <nav id="header-nav" class="navbar">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+            <div id="brand-logo"></div>
+            <div class="company-name">
+              <h1 href="#">Magdalena Kołodziejczyk</h1>
+              <small>adwokat</small>
+            </div>
 
-    <header ui-sref="bla"ng-controller="MKAppController as main"  ng-cloak>
-      {{ main.helloMessage }}
+          </div>
+
+          <div class="collapse navbar-collapse" id="collapse-navbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">O mnie</a></li>
+              <li><a href="#">Kontakt</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      <!-- {{ main.helloMessage }} -->
     </header>
+
+    <section id="jumbotron" class="container-fluid">
+      <article class="container">
+        <div class="row">
+          <div id="main-description" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-6">
+            <h2>Lorem ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti et eveniet nam optio, quidem repellat temporibus vitae voluptatum! A cupiditate exercitationem non quas quisquam rerum saepe vel! Consequatur doloribus error exercitationem fugiat id illum ipsum laboriosam, magni nemo nisi nobis non officia provident quisquam, rem voluptatem voluptatum. Adipisci blanditiis, expedita.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="about container">
+      <article class="row">
+        div.
+      </article>
+    </section>
 
     <!-- RequireJS -->
     <script data-main="src/main" src="/src/lib/requirejs/require.js" charset="utf-8"></script>
-    <!-- AngularJS -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script> -->
-
-    <!-- Firebase -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script> -->
-
-    <!-- AngularFire -->
-    <!-- <script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script> -->
-
-    <!-- App module -->
-    <!-- <script src="app/MKApp.module.js" charset="utf-8"></script> -->
-
-    <!-- MKApp Controller -->
-    <!-- <script src="app/public/MKApp.controller.js" charset="utf-8"></script> -->
-
-
 
   </body>
 </html>

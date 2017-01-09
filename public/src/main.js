@@ -32,11 +32,13 @@ requirejs.config({
   }
 });
 
+requirejs(['jquery', 'bootstrap'], function (jquery, bootstrap) {
 
+});
 
-requirejs(['firebase', 'helpers/firebase_config', 'jquery', 'bootstrap'], function (firebase, firebaseConfig, $, bootstrap) {
+requirejs(['firebase', 'helpers/firebase_config', ], function (firebase, firebaseConfig, $, bootstrap) {
   firebase.initializeApp(firebaseConfig.config);
-  requirejs(['app/MKApp.module'], function (MKApp) {
+  requirejs(['app/mkApp.module'], function (mkApp) {
     // var appModule = 'appModule';
     // angular.module(appModule, [MKApp]);
     // angular.bootstrap(document.getElementsByTagName("body")[0], [ appModule ]);

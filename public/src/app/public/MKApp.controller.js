@@ -1,11 +1,11 @@
 (function(define) {
   define([], function () {
     'use strict';
-    MKAppController.$inject = ['$scope'];
-    function MKAppController($scope) {
+    mkAppController.$inject = ['$scope'];
+    function mkAppController($scope) {
       var $ctrl = this;
       $ctrl.helloMessage = 'Hello World';
     }
-    return MKAppController;
+    return mkAppController;
   });
 }(define));

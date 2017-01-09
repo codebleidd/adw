@@ -1,15 +1,15 @@
 (function(define) {
   define([
     'angularFire',
-    'public/MKApp.controller',
+    'public/mkApp.controller',
     'uiRouter'
   ],
-  function(angularFire, MKAppController){
+  function(angularFire, mkAppController){
     'use strict';
-    var moduleName = 'MKApp';
+    var moduleName = 'mkApp';
     // console.log(angular.module('firebase'));
     angular.module(moduleName, ['ui.router', 'firebase'])
-      .controller('MKAppController', MKAppController);
+      .controller('mkAppController', mkAppController);
     angular.bootstrap(document.getElementsByTagName("body")[0], [ moduleName ]);
     return moduleName;
   });
