@@ -23,23 +23,28 @@
 .company-name {
   display: inline-block; }
   .company-name h1 {
-    padding-top: .6em;
-    font-size: 1.2em;
+    padding-top: .3em;
+    font-size: 1.7em;
     margin: 0; }
   .company-name small {
     text-transform: uppercase; }
 
 .nav > li {
-  padding: 0 30px 0 0; }
+  padding: 0 38px 0 0; }
   .nav > li > a {
-    border-bottom: 3px;
+    -webkit-transition: ease 0.3s;
+    -moz-transition: ease 0.3s;
+    -ms-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    transition: ease 0.3s;
+    border-bottom: transparent solid 3px;
     text-transform: uppercase;
     text-align: center;
     margin-right: 10px;
     padding: 10px 0; }
     .nav > li > a:hover {
       background: none;
-      border-bottom: 3px solid #AC8074; }
+      border-bottom-color: #AC8074; }
     .nav > li > a:active, .nav > li > a:focus {
       background: none; }
 
