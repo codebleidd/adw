@@ -1,37 +1,45 @@
-// General style for navbar
+/** General Styling for Header and Navbar */
+header{
+  background-color: transparent;
+  & * {
+    background-color: transparent;
+  }
+}
 #header-nav {
-  background-color: $darker;
   color: $white;
-  min-height: 80px;
-  margin: 0;
   a {
     color: $white;
   }
-  .container {
-    padding: 20px 0;
+  & > div {
+    padding: 20px;
+  }
+
+  & span.fa, & span.glyphicon {
+    font-size: 2em;
   }
 }
+
 .navbar {
   border: none;
+  margin-bottom: 0;
 }
+
 #brand-logo {
   width: 42px;
   height: 39px;
-  margin: 10px 20px;
+  margin: 10px 0 0 20px;
   background: url("../images/court.png") no-repeat;
   display: inline-block;
   float: left;
 }
 
-.company-name {
+#company-name {
   display: inline-block;
+  margin: 0 20px;
   h1 {
     padding-top: .3em;
     font-size: 1.7em;
     margin: 0;
-  }
-  small {
-    text-transform: uppercase;
   }
 }
 
@@ -46,7 +54,7 @@
     padding: 10px 0;
     &:hover {
       background: none;
-      border-bottom-color: $beige;
+      border-bottom-color: $emphasis;
     }
     &:active, &:focus {
       background: none;

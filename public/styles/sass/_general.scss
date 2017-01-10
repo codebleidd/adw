@@ -1,0 +1,35 @@
+body {
+  background-color: $background_1;
+  font-family: 'Ubuntu', sans-serif;
+  color: $white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h2, h3, h4, h5, h6, small {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h3, h4{
+  color: $emphasis;
+  font-size: 1.2em;
+}
+
+small{
+  color: $emphasis;
+}
+
+.fa, .glyphicon {
+  font-size: 6rem;
+  color: $emphasis;
+}
+
+.icon-bar {
+  background-color: $emphasis;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

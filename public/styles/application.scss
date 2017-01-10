@@ -1,19 +1,11 @@
 @import "sass/_vars.scss";
 @import "sass/_mixins.scss";
+@import "sass/_general.scss";
 @import "sass/_navbar.scss";
 @import "sass/_jumbotron.scss";
+@import "sass/_footer.scss";
+@import "sass/_special-info.scss";
 
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
 
-body {
-  background-color: $darkGrey;
-  font-family: 'Ubuntu', sans-serif;
-  color: $white;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
-}

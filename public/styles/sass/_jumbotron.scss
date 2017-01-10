@@ -6,7 +6,7 @@
   margin-top: 200px;
   margin-bottom: 200px;
   padding: 20px;
-  @include background-opacity($darkGrey, 0.5);
+  @include background-opacity($background_1, 0.5);
   p{
     padding:10px 0;
   }

@@ -1,0 +1,32 @@
+/* Styling for footer */
+
+footer.jumbotron {
+  background: transparent;
+  margin-bottom: 0;
+}
+
+.foot-info {
+  text-align: center;
+  //margin: 20px 0;
+  padding-top: 20px;
+  border-top: solid 3px $emphasis;
+}
+
+.foot-info > ul {
+  list-style: none;
+  padding: 0 10px;
+  & > a {
+    color: $white;
+    text-decoration: none;
+    padding-top: 5px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .foot-info{
+    text-align: left;
+    //margin: 40px 0;
+    padding-top: 40px;
+  }
+}

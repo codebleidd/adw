@@ -1,33 +1,67 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu");
-#header-nav {
-  background-color: #111113;
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700");
+body {
+  background-color: #161719;
+  font-family: 'Ubuntu', sans-serif;
   color: #fff;
-  min-height: 80px;
-  margin: 0; }
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+h2, h3, h4, h5, h6, small {
+  font-weight: 700;
+  text-transform: uppercase; }
+
+h3, h4 {
+  color: #AC8074;
+  font-size: 1.2em; }
+
+small {
+  color: #AC8074; }
+
+.fa, .glyphicon {
+  font-size: 6rem;
+  color: #AC8074; }
+
+.icon-bar {
+  background-color: #AC8074; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+/** General Styling for Header and Navbar */
+header {
+  background-color: transparent; }
+  header * {
+    background-color: transparent; }
+
+#header-nav {
+  color: #fff; }
   #header-nav a {
     color: #fff; }
-  #header-nav .container {
-    padding: 20px 0; }
+  #header-nav > div {
+    padding: 20px; }
+  #header-nav span.fa, #header-nav span.glyphicon {
+    font-size: 2em; }
 
 .navbar {
-  border: none; }
+  border: none;
+  margin-bottom: 0; }
 
 #brand-logo {
   width: 42px;
   height: 39px;
-  margin: 10px 20px;
+  margin: 10px 0 0 20px;
   background: url("../images/court.png") no-repeat;
   display: inline-block;
   float: left; }
 
-.company-name {
-  display: inline-block; }
-  .company-name h1 {
+#company-name {
+  display: inline-block;
+  margin: 0 20px; }
+  #company-name h1 {
     padding-top: .3em;
     font-size: 1.7em;
     margin: 0; }
-  .company-name small {
-    text-transform: uppercase; }
 
 .nav > li {
   padding: 0 38px 0 0; }
@@ -61,15 +95,46 @@
   #main-description p {
     padding: 10px 0; }
 
-body {
-  background-color: #161719;
-  font-family: 'Ubuntu', sans-serif;
-  color: #fff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+/* Styling for footer */
+footer.jumbotron {
+  background: transparent;
+  margin-bottom: 0; }
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important; }
+.foot-info {
+  text-align: center;
+  padding-top: 20px;
+  border-top: solid 3px #AC8074; }
+
+.foot-info > ul {
+  list-style: none;
+  padding: 0 10px; }
+  .foot-info > ul > a {
+    color: #fff;
+    text-decoration: none;
+    padding-top: 5px; }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .foot-info {
+    text-align: left;
+    padding-top: 40px; } }
+/* Styling for #special-info container */
+#special-info {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: solid 3px #AC8074; }
+  #special-info h2 {
+    font-size: 1.5em;
+    padding-left: 15px;
+    margin: 0; }
+  #special-info small {
+    padding-left: 15px; }
+
+.info-item {
+  margin-top: 20px; }
+.info-icon, .info-title {
+  display: inline-block; }
+.info-desc p {
+  margin: 20px 0 30px 10px; }
 
 /*# sourceMappingURL=application.css.map */
