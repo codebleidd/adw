@@ -9,7 +9,7 @@ requirejs.config({
     'angular' : 'angularjs/angular',
     'angularFire': 'angularjs/angularfire',
     'uiRouter': 'angularjs/angular-ui',
-    'public': '../app/public'
+    'public': '../app/public',
   },
   shim: {
     'angular' : {
@@ -36,7 +36,7 @@ requirejs(['jquery', 'bootstrap'], function (jquery, bootstrap) {
 
 });
 
-requirejs(['firebase', 'helpers/firebase_config', ], function (firebase, firebaseConfig, $, bootstrap) {
+requirejs(['firebase', 'helpers/firebase_config', ], function (firebase, firebaseConfig) {
   firebase.initializeApp(firebaseConfig.config);
   requirejs(['app/mkApp.module'], function (mkApp) {
     // var appModule = 'appModule';
