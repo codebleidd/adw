@@ -39,8 +39,6 @@ requirejs(['jquery', 'bootstrap'], function (jquery, bootstrap) {
 requirejs(['firebase', 'helpers/firebase_config', ], function (firebase, firebaseConfig) {
   firebase.initializeApp(firebaseConfig.config);
   requirejs(['app/mkApp.module'], function (mkApp) {
-    // var appModule = 'appModule';
-    // angular.module(appModule, [MKApp]);
-    // angular.bootstrap(document.getElementsByTagName("body")[0], [ appModule ]);
+    angular.bootstrap(document.getElementsByTagName("body")[0], [mkApp]);
   });
 });

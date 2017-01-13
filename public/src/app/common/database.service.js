@@ -2,30 +2,23 @@
  * Created by Maciek on 11.01.2017.
  */
 
-(function(define){
+(function (define) {
   'use strict';
   define([],
-  function () {
-    DatabaseService.$inject = ['$http', '$firebaseObject'];
-    function DatabaseService($http, $firebaseObject) {
+    function () {
+      DatabaseService.$inject = ['$http', '$firebaseObject'];
+      function DatabaseService($http, $firebaseObject) {
 
-      var service = this;
-
-      service.getCredentials = function () {
+        var service = this;
         var ref = firebase.database().ref();
-        return $firebaseObject(ref).$loaded().then(function (response) {
-          return response.credentials;
-        });
-      };
 
-      service.getShit = function () {
-        $http.get('shit.json').then(function (response) {
-          console.log(response.data);
-          return response.data;
-        });
-      };
+        service.getCredentials = function () {
+          return $firebaseObject(ref).$loaded(function(response) {
+            return response.credentials;
+          });
+        };
 
-    };
-    return DatabaseService;
-  });
+      };
+      return DatabaseService;
+    });
 }(define));
