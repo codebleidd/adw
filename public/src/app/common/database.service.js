@@ -13,9 +13,25 @@
         var ref = firebase.database().ref();
 
         service.getCredentials = function () {
-          return $firebaseObject(ref).$loaded(function(response) {
-            return response.credentials;
-          });
+          return ref.once('value')
+            .then(
+              function (snapshot) {
+                return snapshot.credentials;
+              });
+          return 'no, it does not'
+        };
+
+
+        service.getShit = function () {
+          return $http.get('shit.json')
+            .then(
+              function (response) {
+                console.log(response);
+                return response.data;
+              },
+              function (error) {
+                throw new Error('Shit fucked up');
+              });
         };
 
       };

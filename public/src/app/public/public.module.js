@@ -5,15 +5,17 @@
   define([
       '../common/database.service',
       './page-footer/page-footer.component',
+      './controller',
       './routes',
       'angularFire',
       'uiRouter'
     ],
-    function (DatabaseService, PageFooter) {
+    function (DatabaseService, PageFooter, MainCtrl) {
       'use strict';
       var moduleName = 'public';
 
       angular.module(moduleName, ['ui.router', 'firebase'])
+        .controller('MainCtrl', MainCtrl)
         .service('DatabaseService', DatabaseService)
         .component('pageFooter', PageFooter);
 
