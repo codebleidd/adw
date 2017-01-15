@@ -10,15 +10,14 @@
       function DatabaseService($http, $firebaseObject) {
 
         var service = this;
-        var ref = firebase.database().ref();
+        var ref = firebase.database().ref().child('credentials');
 
         service.getCredentials = function () {
-          return ref.once('value')
-            .then(
+          return $firebaseObject(ref)
+            .$loaded(
               function (snapshot) {
                 return snapshot.credentials;
               });
-          return 'no, it does not'
         };
 
 
