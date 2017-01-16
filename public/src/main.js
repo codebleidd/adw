@@ -6,7 +6,7 @@ requirejs.config({
     'helpers': '../helpers',
     'firebase': 'https://www.gstatic.com/firebasejs/3.6.4/firebase',
     'jquery' : 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min',
-    'angular' : 'angularjs/angular',
+    'angular' : 'angularjs/angular.min',
     'angularFire': 'angularjs/angularfire',
     'uiRouter': 'angularjs/angular-ui',
     'public': '../app/public',

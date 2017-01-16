@@ -9,6 +9,15 @@
     function PageFooterCtrl(DatabaseService, $timeout) {
       var $ctrl = this;
 
+      var dataPromise = DatabaseService.getCredentials();
+      dataPromise
+        .then(function (snapshot) {
+          $ctrl.contact = snapshot.contact;
+          $ctrl.address = snapshot.address;
+        })
+        .catch(function (reject) {
+          console.log(reject);
+        });
 
     };
 

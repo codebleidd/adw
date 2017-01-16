@@ -11,7 +11,7 @@
 
       $stateProvider
 
-        .state('mainPage', {
+        .state('homepage', {
           url: '/',
           templateUrl: ''
         });

@@ -2,12 +2,18 @@
   'use strict';
   define([],
   function () {
-    MainCtrl.$inject = ['DatabaseService', '$timeout'];
-    function MainCtrl(DatabaseService,$timeout) {
-      var ctrl = this;
+    MainCtrl.$inject = ['DatabaseService', '$timeout', '$firebaseObject'];
+    function MainCtrl(DatabaseService,$timeout, $firebaseObject) {
+      var mainCtrl = this;
 
-      ctrl.message =  DatabaseService.getCredentials();
-      ctrl.shit = 'jeb sie pierdolony angularze';
+      var dataPromise = DatabaseService.getCredentials();
+      dataPromise
+        .then(function (snapshot) {
+          mainCtrl.contact = snapshot;
+        })
+        .catch(function (reject) {
+          console.log(reject);
+        });
 
     };
 

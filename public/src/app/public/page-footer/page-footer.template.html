@@ -21,34 +21,25 @@
           </a>
         </ul>
       </div>
-      <div class="foot-info contact col-xs-12 col-sm-4 col-md-3">
-        <h3>Kontakt</h3>
-        <ul>
-          <li></li>
-          <li></li>
-          <!--<li>{{ $ctrl.credentials.contact.email }}</li>-->
-        </ul>
-      </div>
       <div class="foot-info address col-xs-12 col-sm-4 col-md-3">
         <h3>Adres</h3>
         <ul>
-          <a href="">
-            <li>Lorem ipsum.</li>
-          </a>
-          <a href="">
-            <li>Quaerat, sunt?</li>
-          </a>
-          <a href="">
-            <li>Dignissimos, nostrum!</li>
-          </a>
-          <a href="">
-            <li>Aut, placeat.</li>
-          </a>
-          <a href="">
-            <li>In, totam.</li>
-          </a>
+          <li>{{ $ctrl.address.street }} {{ $ctrl.address.number }}</li>
+          <li>{{ $ctrl.address.postal_code }}</li>
+          <li>{{ $ctrl.address.city }}</li>
+          <li>{{ $ctrl.address.province }}</li>
+          <li>{{ $ctrl.address.country }}</li>
         </ul>
       </div>
+      <div class="foot-info contact col-xs-12 col-sm-4 col-md-3">
+        <h3>Kontakt</h3>
+        <ul>
+          <li>{{ $ctrl.contact.cell_number }}</li>
+          <li>{{ $ctrl.contact.phone_number }}</li>
+          <li>{{ $ctrl.contact.email }}</li>
+        </ul>
+      </div>
+
       <div class="foot-info col-xs-hidden col-md-3"></div>
     </article>
   </div>

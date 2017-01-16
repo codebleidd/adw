@@ -6,34 +6,29 @@
   'use strict';
   define([],
     function () {
-      DatabaseService.$inject = ['$http', '$firebaseObject'];
-      function DatabaseService($http, $firebaseObject) {
 
+      DatabaseService.$inject = ['$http', '$firebaseObject'];
+
+      function DatabaseService($http, $firebaseObject) {
         var service = this;
-        var ref = firebase.database().ref().child('credentials');
+        var ref = firebase.database().ref('credentials');
 
         service.getCredentials = function () {
-          return $firebaseObject(ref)
-            .$loaded(
-              function (snapshot) {
-                return snapshot.credentials;
-              });
+          return $firebaseObject(ref).$loaded()
+            .then(function (snapshot) {
+              return snapshot;
+            })
+            .catch(function (error) {
+              console.error('Error occured: ', error);
+            });
         };
-
 
         service.getShit = function () {
-          return $http.get('shit.json')
-            .then(
-              function (response) {
-                console.log(response);
-                return response.data;
-              },
-              function (error) {
-                throw new Error('Shit fucked up');
-              });
-        };
+          return $http.get('shit.json');
+        }
 
       };
+
       return DatabaseService;
     });
 }(define));

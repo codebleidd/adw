@@ -15,8 +15,8 @@
       var moduleName = 'public';
 
       angular.module(moduleName, ['ui.router', 'firebase'])
-        .controller('MainCtrl', MainCtrl)
         .service('DatabaseService', DatabaseService)
+        .controller('MainCtrl', MainCtrl)
         .component('pageFooter', PageFooter);
 
       return moduleName;
