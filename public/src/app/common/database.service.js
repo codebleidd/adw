@@ -11,9 +11,10 @@
 
       function DatabaseService($http, $firebaseObject) {
         var service = this;
-        var ref = firebase.database().ref('credentials');
+        var database = firebase.database();
 
         service.getCredentials = function () {
+          var ref = database.ref('credentials');
           return $firebaseObject(ref).$loaded()
             .then(function (snapshot) {
               return snapshot;
@@ -23,9 +24,16 @@
             });
         };
 
-        service.getShit = function () {
-          return $http.get('shit.json');
-        }
+        service.getComponents = function (path) {
+          var ref = database.ref('components/' + path);
+          return $firebaseObject(ref).$loaded()
+            .then(function (snapshot) {
+              return snapshot;
+            })
+            .catch(function (error) {
+              console.error('Error occured: ', error);
+            });
+        };
 
       };
 

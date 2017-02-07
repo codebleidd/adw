@@ -5,18 +5,58 @@
   'use strict';
   define([],
   function () {
-    RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
-    function RoutesConfig($stateProvider, $urlRouterProvider) {
-      $urlRouterProvider.otherwise('/');
+    RoutesConfig.$inject = ['$stateProvider'];
+    function RoutesConfig($stateProvider) {
 
       $stateProvider
 
-        .state('homepage', {
+        .state('public',{
+          abstract: true,
+          templateUrl: 'src/app/public/public.html',
+          controller: 'PublicCtrl as public',
+          resolve: {
+            credentials: ['DatabaseService', function (DatabaseService) {
+              return  DatabaseService.getCredentials();
+            }]
+          }
+        })
+
+        .state('public.homepage', {
           url: '/',
-          templateUrl: ''
+          templateUrl: 'src/app/public/homepage/homepage.template.html',
+          controller: 'HomePageCtrl as home',
+          resolve: {
+            elements: ['DatabaseService', function (DatabaseService) {
+              return DatabaseService.getComponents('main_page');
+            }]
+          }
+        })
+
+        .state('public.aboutme', {
+          url: '/omnie',
+          templateUrl: 'src/app/public/aboutme/aboutme.template.html'
+
         });
 
     };
     return RoutesConfig;
   });
 }(define));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

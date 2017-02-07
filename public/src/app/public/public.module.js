@@ -4,20 +4,25 @@
 (function (define) {
   define([
       '../common/database.service',
+      './public.controller',
+      './homepage/homepage.controller',
       './page-footer/page-footer.component',
-      './controller',
+      './special-info/special-info.component',
       './routes',
       'angularFire',
       'uiRouter'
     ],
-    function (DatabaseService, PageFooter, MainCtrl) {
+    function (DatabaseService, PublicCtrl, HomePageCtrl, PageFooter, SpecialInfo, RoutesConfig) {
       'use strict';
       var moduleName = 'public';
 
       angular.module(moduleName, ['ui.router', 'firebase'])
         .service('DatabaseService', DatabaseService)
-        .controller('MainCtrl', MainCtrl)
-        .component('pageFooter', PageFooter);
+        .controller('PublicCtrl', PublicCtrl)
+        .controller('HomePageCtrl', HomePageCtrl)
+        .component('pageFooter', PageFooter)
+        .component('specialInfo', SpecialInfo)
+        .config(RoutesConfig);
 
       return moduleName;
     });
