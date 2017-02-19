@@ -1,5 +1,8 @@
 #jumbotron {
   background: url('../images/jumbotron.jpg') center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  border-bottom: solid 3px $emphasis;
 }
 
 #main-description {

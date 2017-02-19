@@ -45,7 +45,10 @@ header{
 }
 
 .nav > li{
-  padding: 0 38px 0 0;
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+    padding: 0 38px 0 0;
+  }
   & > a {
     @include transition(ease .3s);
     border-bottom: transparent solid 3px;
