@@ -1,9 +1,9 @@
 /** General Styling for Header and Navbar */
 header{
-  background-color: transparent;
+  background-color: $background_2;
   border-bottom: solid 3px $emphasis;
   & * {
-    background-color: transparent;
+    background-color: $background_2;
   }
 }
 #header-nav {

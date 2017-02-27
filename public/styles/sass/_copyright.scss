@@ -1,0 +1,13 @@
+.copyright {
+  &-text {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 15px;
+
+    span {
+      color: $emphasis;
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+  }
+}

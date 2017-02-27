@@ -1,0 +1,20 @@
+<main id="homepage">
+  <section id="jumbotron" class="container-fluid">
+    <article class="row">
+      <div id="main-description" class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-5">
+        <h2>{{ home.jumbotron.title }}</h2>
+        <p>{{ home.jumbotron.content }}</p>
+      </div>
+    </article> <!-- /.container -->
+  </section> <!-- /#jumbotron -->
+
+  <section id="special-info" class="container">
+    <article class="row">
+      <special-info ng-repeat="specialInfo in home.specialInfos"
+                    info="specialInfo">
+
+      </special-info>
+    </article> <!-- /.row -->
+  </section> <!-- ./#special-info -->
+</main>
+

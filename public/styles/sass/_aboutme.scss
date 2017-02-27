@@ -1,0 +1,51 @@
+#aboutme {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.aboutme- {
+  &img {
+    //vertical-align: ;
+  }
+
+  &id {
+    text-align: center;
+  }
+
+  &description {
+    margin-top: 75px;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 1.1em;
+  }
+}
+
+/* Small Devices, Tablets */
+//@media only screen and (min-width : 768px) {
+//
+//}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  #aboutme {
+  }
+
+  .aboutme- {
+    &img {
+
+    }
+
+    &id {
+      text-align: left;
+      padding-top: 40px;
+    }
+
+    &decription {
+    }
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
