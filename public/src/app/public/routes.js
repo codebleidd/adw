@@ -21,22 +21,31 @@
           }
         })
 
-        .state('public.homepage', {
-          url: '/',
-          templateUrl: 'src/app/public/homepage/homepage.template.html',
-          controller: 'HomePageCtrl as home',
-          resolve: {
-            elements: ['DatabaseService', function (DatabaseService) {
-              return DatabaseService.getComponents('main_page');
-            }]
-          }
-        })
+          .state('public.homepage', {
+            url: '/',
+            templateUrl: 'src/app/public/homepage/homepage.template.html',
+            controller: 'HomePageCtrl as home',
+            resolve: {
+              elements: ['DatabaseService', function (DatabaseService) {
+                return DatabaseService.getComponents('main_page');
+              }]
+            }
+          })
 
-        .state('public.aboutme', {
-          url: '/omnie',
-          templateUrl: 'src/app/public/aboutme/aboutme.template.html'
-
-        });
+          .state('public.aboutme', {
+            url: '/omnie',
+            templateUrl: 'src/app/public/aboutme/aboutme.template.html',
+            controller: 'AboutmeCtrl as aboutme',
+            resolve: {
+              elements: ['DatabaseService', function (DatabaseService) {
+                return DatabaseService.getComponents('aboutme');
+              }]
+            }
+          })
+          .state('public.contact', {
+            url:'/kontakt',
+            templateUrl: 'src/app/public/contact/contact.template.html'
+          });
 
     };
     return RoutesConfig;

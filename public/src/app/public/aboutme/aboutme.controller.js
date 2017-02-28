@@ -5,8 +5,11 @@
   'use strict';
   define([],
   function () {
-    function AboutMeCtrl() {
+    AboutMeCtrl.$inject = ['elements'];
+    function AboutMeCtrl(elements) {
       var aboutme = this;
+
+      aboutme.info = elements;
 
     };
     return AboutMeCtrl;

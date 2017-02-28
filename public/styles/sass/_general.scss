@@ -7,6 +7,10 @@ body {
   box-sizing: border-box;
 }
 
+main {
+  border-bottom: 3px solid $emphasis;
+}
+
 h2, h3, h4, h5, h6, small {
   font-weight: 700;
   text-transform: uppercase;

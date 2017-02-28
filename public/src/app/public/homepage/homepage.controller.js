@@ -12,7 +12,6 @@
 
       home.jumbotron = elements.jumbotron.text;
       home.specialInfos = elements.special_infos.infos;
-      console.log(home.specialInfos[0].content);
 
     };
 

@@ -7,6 +7,9 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+main {
+  border-bottom: 3px solid #AC8065; }
+
 h2, h3, h4, h5, h6, small {
   font-weight: 700;
   text-transform: uppercase; }
@@ -154,7 +157,10 @@ footer.jumbotron {
 
 #aboutme {
   padding-top: 100px;
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  background: url("../images/aboutme.jpg") center no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
 
 .aboutme-id {
   text-align: center; }
@@ -171,13 +177,21 @@ footer.jumbotron {
     text-align: left;
     padding-top: 40px; } }
 /* Large Devices, Wide Screens */
-.copyright-text {
-  text-align: center;
-  font-size: 0.9em;
-  padding: 15px; }
-  .copyright-text span {
-    color: #AC8065;
-    font-size: 1.2em;
-    font-weight: 700; }
+#contact {
+  background: url("../images/contact.jpg") center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 1000px; }
+
+.copyright {
+  border-top: 3px solid #AC8065; }
+  .copyright-text {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 15px; }
+    .copyright-text span {
+      color: #AC8065;
+      font-size: 1.2em;
+      font-weight: 700; }
 
 /*# sourceMappingURL=application.css.map */
