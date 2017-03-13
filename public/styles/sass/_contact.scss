@@ -1,6 +1,95 @@
 #contact {
-  background: url("../images/contact.jpg") center no-repeat;
+  background: url("../images/contact.png") center no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  margin-bottom: 0;
   height: 1000px;
+
+  .row{
+    padding: 25px;
+    @include background-opacity($background_1, 0.5);
+  }
+}
+
+.group {
+  position: relative;
+  margin-bottom: 25px;
+
+  input {
+    font-size: 16px;
+    padding: 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: $emphasis solid 1px;
+    background: transparent;
+
+    &:focus{
+      outline: none;
+    }
+
+    &:focus ~ label, &:valid ~ label {
+      font-size: 12px;
+      top: -15px;
+    }
+
+  }
+
+  label{
+    color: $white;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    @include transition(0.2s ease all);
+  }
+
+  .bar{
+    position: relative;
+    display: block;
+    width: 300px;
+
+    &:before, &:after {
+      content: '';
+      height: 2px;
+      width: 0;
+      bottom: 1px;
+      position: absolute;
+      background: $emphasis;
+      @include transition(0.2s ease all);
+    }
+
+    &:before {
+      left:50%;
+    }
+    &:after {
+      right:50%;
+    }
+
+  }
+
+  &:focus ~ .bar:before, &:focus ~ .bar:after {
+    width:50%;
+  }
+
+  .highlight {
+    position:absolute;
+    height:60%;
+    width:100px;
+    top:25%;
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+
+  &:focus ~ .highlight {
+    animation:inputHighlighter 0.3s ease;
+  }
+
+  @keyframes inputHighlighter {
+    from  { background:#5264AE; }
+    to    { width:0; background:transparent; }
+  }
 }

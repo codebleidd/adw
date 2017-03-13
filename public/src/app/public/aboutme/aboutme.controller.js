@@ -9,7 +9,7 @@
     function AboutMeCtrl(elements) {
       var aboutme = this;
 
-      aboutme.info = elements;
+      aboutme.info = elements.content;
 
     };
     return AboutMeCtrl;

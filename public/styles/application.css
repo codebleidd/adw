@@ -93,7 +93,7 @@ header {
       background: none; }
 
 #jumbotron {
-  background: url("../images/jumbotron.jpg") center no-repeat;
+  background: url("../images/jumbotron.png") center no-repeat;
   background-attachment: fixed;
   background-size: cover;
   border-bottom: solid 3px #AC8065; }
@@ -158,9 +158,13 @@ footer.jumbotron {
 #aboutme {
   padding-top: 100px;
   padding-bottom: 100px;
-  background: url("../images/aboutme.jpg") center no-repeat;
+  background: url("../images/aboutme.png") center no-repeat;
   background-attachment: fixed;
   background-size: cover; }
+  #aboutme .row {
+    background: #000;
+    /* The Fallback */
+    background: rgba(0, 0, 0, 0.5); }
 
 .aboutme-id {
   text-align: center; }
@@ -178,11 +182,84 @@ footer.jumbotron {
     padding-top: 40px; } }
 /* Large Devices, Wide Screens */
 #contact {
-  background: url("../images/contact.jpg") center no-repeat;
+  background: url("../images/contact.png") center no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  margin-bottom: 0;
   height: 1000px; }
+  #contact .row {
+    padding: 25px;
+    background: #000;
+    /* The Fallback */
+    background: rgba(0, 0, 0, 0.5); }
 
+.group {
+  position: relative;
+  margin-bottom: 25px; }
+  .group input {
+    font-size: 16px;
+    padding: 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: #AC8065 solid 1px;
+    background: transparent; }
+    .group input:focus {
+      outline: none; }
+    .group input:focus ~ label, .group input:valid ~ label {
+      font-size: 12px;
+      top: -15px; }
+  .group label {
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    -webkit-transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -ms-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    transition: 0.2s ease all; }
+  .group .bar {
+    position: relative;
+    display: block;
+    width: 300px; }
+    .group .bar:before, .group .bar:after {
+      content: '';
+      height: 2px;
+      width: 0;
+      bottom: 1px;
+      position: absolute;
+      background: #AC8065;
+      -webkit-transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -ms-transition: 0.2s ease all;
+      -o-transition: 0.2s ease all;
+      transition: 0.2s ease all; }
+    .group .bar:before {
+      left: 50%; }
+    .group .bar:after {
+      right: 50%; }
+  .group:focus ~ .bar:before, .group:focus ~ .bar:after {
+    width: 50%; }
+  .group .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5; }
+  .group:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease; }
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE; }
+  to {
+    width: 0;
+    background: transparent; } }
 .copyright {
   border-top: 3px solid #AC8065; }
   .copyright-text {
