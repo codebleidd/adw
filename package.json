@@ -1,0 +1,22 @@
+{
+  "name": "adwokat",
+  "version": "1.0.0",
+  "description": "MK app",
+  "main": "public/index.html",
+  "scripts": {
+    "wp-dev": "webpack -d --watch",
+    "wp-prod": "webpack -p --watch"
+  },
+  "author": "Maciej Kołodziejczyk",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "angular": "^1.6.2",
+    "angular-ui-router": "^0.4.2",
+    "angularfire": "^2.3.0",
+    "firebase": "^3.7.1",
+    "lodash": "^4.17.4"
+  }
+}
