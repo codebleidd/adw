@@ -5,11 +5,15 @@
   "main": "public/index.html",
   "scripts": {
     "wp-dev": "webpack -d --watch",
-    "wp-prod": "webpack -p --watch"
+    "wp-prod": "webpack -p --watch",
+    "bs-start": "cd public && browser-sync start -s -f \"*/**\""
   },
   "author": "Maciej Kołodziejczyk",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "browser-sync-webpack-plugin": "^1.1.4",
+    "html-loader": "^0.4.5",
     "webpack": "^2.2.1"
   },
   "dependencies": {

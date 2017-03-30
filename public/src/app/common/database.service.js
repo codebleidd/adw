@@ -1,42 +1,28 @@
 /**
  * Created by Maciek on 11.01.2017.
  */
+import firebase from 'firebase';
 
-(function (define) {
-  'use strict';
-  define([],
-    function () {
+export default function DatabaseService() {
+  var service = this;
 
-      DatabaseService.$inject = ['$http', '$firebaseObject'];
+  service.getCredentials = function () {
+    return firebase.database().ref('credentials').once('value')
+      .then(function (snapshot) {
+        return snapshot.val();
+      })
+      .catch(function (error) {
+        console.error('Error occured: ', error);
+      });
+  };
 
-      function DatabaseService($http, $firebaseObject) {
-        var service = this;
-        var database = firebase.database();
-
-        service.getCredentials = function () {
-          var ref = database.ref('credentials');
-          return $firebaseObject(ref).$loaded()
-            .then(function (snapshot) {
-              return snapshot;
-            })
-            .catch(function (error) {
-              console.error('Error occured: ', error);
-            });
-        };
-
-        service.getComponents = function (path) {
-          var ref = database.ref('components/' + path);
-          return $firebaseObject(ref).$loaded()
-            .then(function (snapshot) {
-              return snapshot;
-            })
-            .catch(function (error) {
-              console.error('Error occured: ', error);
-            });
-        };
-
-      };
-
-      return DatabaseService;
-    });
-}(define));
+  service.getComponents = function (path) {
+    return firebase.database().ref('/components/' + path).once('value')
+      .then(function (snapshot) {
+        return snapshot.val();
+      })
+      .catch(function (error) {
+        console.error('Error occured: ', error);
+      });
+  };
+};

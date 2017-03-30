@@ -1,47 +1,94 @@
 /**
  * Created by Maciek on 13.01.2017.
  */
-(function (define) {
-  define([
-      '../common/database.service',
+// (function (define) {
+//   define([
+//       '../common/database.service',
+//
+//       './public.controller',
+//       './homepage/homepage.controller',
+//       './aboutme/aboutme.controller',
+//
+//       './page-footer/page-footer.component',
+//       './special-info/special-info.component',
+//       './aboutme/aboutme.elem.component',
+//
+//       './routes',
+//       'angularFire',
+//       'uiRouter'
+//     ],
+//     function (DatabaseService,
+//               PublicCtrl,
+//               HomePageCtrl,
+//               AboutmeCtrl,
+//               PageFooter,
+//               SpecialInfo,
+//               AboutmeElem,
+//               RoutesConfig) {
+//
+//       'use strict';
+//       var moduleName = 'public';
+//
+//       angular.module(moduleName, ['ui.router', 'firebase'])
+//         .service('DatabaseService', DatabaseService)
+//
+//         .controller('PublicCtrl', PublicCtrl)
+//         .controller('HomePageCtrl', HomePageCtrl)
+//         .controller('AboutmeCtrl', AboutmeCtrl)
+//
+//         .component('pageFooter', PageFooter)
+//         .component('specialInfo', SpecialInfo)
+//         .component('aboutmeElem', AboutmeElem)
+//
+//         .config(RoutesConfig);
+//
+//       return moduleName;
+//     });
+// }(define));
 
-      './public.controller',
-      './homepage/homepage.controller',
-      './aboutme/aboutme.controller',
+/** Dependecies */
+// import angular from 'angular';
+import uirouter from 'angular-ui-router';
 
-      './page-footer/page-footer.component',
-      './special-info/special-info.component',
-      './aboutme/aboutme.elem.component',
+/** Services */
+import DatabaseService from 'Common/database.service.js';
 
-      './routes',
-      'angularFire',
-      'uiRouter'
-    ],
-    function (DatabaseService,
-              PublicCtrl,
-              HomePageCtrl,
-              AboutmeCtrl,
-              PageFooter,
-              SpecialInfo,
-              AboutmeElem,
-              RoutesConfig) {
+/** Controllers*/
+import PublicCtrl from 'Public/public.controller.js';
+import HomePageCtrl from 'Public/homepage/homepage.controller.js';
+import AboutmeCtrl from 'Public/aboutme/aboutme.controller.js';
 
-      'use strict';
-      var moduleName = 'public';
+/** Components */
+import PageFooter from 'Public/page-footer/page-footer.component.js';
+import SpecialInfo from 'Public/special-info/special-info.component.js';
+import AboutmeElem from 'Public/public.controller.js';
 
-      angular.module(moduleName, ['ui.router', 'firebase'])
-        .service('DatabaseService', DatabaseService)
 
-        .controller('PublicCtrl', PublicCtrl)
-        .controller('HomePageCtrl', HomePageCtrl)
-        .controller('AboutmeCtrl', AboutmeCtrl)
+/** Configs */
+import RoutesConfig from 'Public/routes.js';
 
-        .component('pageFooter', PageFooter)
-        .component('specialInfo', SpecialInfo)
-        .component('aboutmeElem', AboutmeElem)
+/** Public module instantiation */
+var moduleName = 'public';
 
-        .config(RoutesConfig);
+/** Default public module of the app*/
+export default angular.module(moduleName, [uirouter])
+  .service('DatabaseService', DatabaseService)
 
-      return moduleName;
-    });
-}(define));
+  .controller('PublicCtrl', PublicCtrl)
+  .controller('HomePageCtrl', HomePageCtrl)
+  .controller('AboutmeCtrl', AboutmeCtrl)
+
+  .component('pageFooter', PageFooter)
+  .component('specialInfo', SpecialInfo)
+  .component('aboutmeElem', AboutmeElem)
+
+  .config(RoutesConfig)
+  .name;
+
+
+
+
+
+
+
+
