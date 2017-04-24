@@ -1,20 +1,10 @@
-// (function(define){
-//   'use strict';
-//
-//   define([],
-//   function () {
-//     return {
-//       templateUrl: 'src/app/public/aboutme/aboutme.elem.template.html',
-//       bindings: {
-//         info: '<'
-//       }
-//     }
-//   });
-//
-// }(define));
+/**
+ * Created by Maciek on 02.04.2017
+ * */
+export default AboutmeElem;
+
 var AboutmeElem = {
   template: require('Public/aboutme/aboutme.elem.template.html'),
   bindings: {
     info: '<'
   };
-export default AboutmeElem;

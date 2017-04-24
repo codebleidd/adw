@@ -3,7 +3,9 @@
  */
 import firebase from 'firebase';
 
-export default function DatabaseService() {
+export default DatabaseService;
+
+function DatabaseService() {
   var service = this;
 
   service.getCredentials = function () {

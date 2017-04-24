@@ -2,10 +2,11 @@
  * Created by Maciek on 18.01.2017.
  */
 
-AboutMeCtrl.$inject = ['elements'];
-export default function AboutMeCtrl(elements) {
+AboutMeCtrl.$inject = ['aboutmeElmes'];
+
+export default AboutMeCtrl;
+
+function AboutMeCtrl(aboutmeElmes) {
   var aboutme = this;
-
-  aboutme.info = elements.content;
-
+  aboutme.info = aboutmeElmes.content;
 };

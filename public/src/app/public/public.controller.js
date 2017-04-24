@@ -4,10 +4,10 @@
 
 PublicCtrl.$inject = ['credentials'];
 
-export default function PublicCtrl(credentials) {
-  var $ctrl = this;
+export default PublicCtrl;
 
+function PublicCtrl(credentials) {
+  var $ctrl = this;
   $ctrl.address = credentials.address;
   $ctrl.contact = credentials.contact;
-
 };

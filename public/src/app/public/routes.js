@@ -3,7 +3,10 @@
  */
 
 RoutesConfig.$inject = ['$stateProvider'];
-export default function RoutesConfig($stateProvider) {
+
+export default RoutesConfig;
+
+function RoutesConfig($stateProvider) {
 
   $stateProvider
 
@@ -32,9 +35,9 @@ export default function RoutesConfig($stateProvider) {
     .state('public.aboutme', {
       url: '/omnie',
       template: require('Public/aboutme/aboutme.template.html'),
-      controller: 'AboutmeCtrl as aboutme',
+      controller: 'AboutMeCtrl as aboutme',
       resolve: {
-        elements: ['DatabaseService', function (DatabaseService) {
+        aboutmeElmes: ['DatabaseService', function (DatabaseService) {
           return DatabaseService.getComponents('aboutme');
         }]
       }

@@ -64,9 +64,4 @@ var FirebaseConfig = {
 };
 
 firebase.initializeApp(FirebaseConfig);
-
-firebase.database().ref('/credentials/').once('value')
-  .then(function (snapshot) {
-    window.fbvar = snapshot.val();
-  });
 angular.bootstrap(document.getElementsByTagName("body")[0], [mkApp]);
