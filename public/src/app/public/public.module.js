@@ -17,7 +17,7 @@ import AboutMeCtrl from 'Public/aboutme/aboutme.controller.js';
 /** Components */
 import PageFooter from 'Public/page-footer/page-footer.component.js';
 import SpecialInfo from 'Public/special-info/special-info.component.js';
-import AboutmeElem from 'Public/public.controller.js';
+import AboutmeElem from 'Public/aboutme/aboutme.elem.component.js';
 
 /** Configs */
 import RoutesConfig from 'Public/routes.js';
@@ -29,13 +29,13 @@ var moduleName = 'publicModule';
 export default angular.module(moduleName, [uirouter])
   .service('DatabaseService', DatabaseService)
 
-  .component('pageFooter', PageFooter)
-  .component('specialInfo', SpecialInfo)
-  .component('aboutmeElem', AboutmeElem)
-
   .controller('PublicCtrl', PublicCtrl)
   .controller('HomePageCtrl', HomePageCtrl)
   .controller('AboutMeCtrl', AboutMeCtrl)
+
+  .component('pageFooter', PageFooter)
+  .component('aboutmeElem', AboutmeElem)
+  .component('specialInfo', SpecialInfo)
 
   .config(RoutesConfig)
   .name;

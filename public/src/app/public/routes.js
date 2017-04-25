@@ -37,7 +37,10 @@ function RoutesConfig($stateProvider) {
       template: require('Public/aboutme/aboutme.template.html'),
       controller: 'AboutMeCtrl as aboutme',
       resolve: {
-        aboutmeElmes: ['DatabaseService', function (DatabaseService) {
+        credentials: ['DatabaseService', function (DatabaseService) {
+          return  DatabaseService.getCredentials();
+        }],
+        aboutmeElems: ['DatabaseService', function (DatabaseService) {
           return DatabaseService.getComponents('aboutme');
         }]
       }
