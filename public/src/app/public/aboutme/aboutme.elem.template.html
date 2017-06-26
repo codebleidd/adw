@@ -1,17 +1,14 @@
 <div class="row">
-  Dupa
-  {{ $ctrl.personalInfo }}
-
   <div class="col-xs-12 col-md-4 text-center">
-    <img ng-src="{{ $ctrl.personalInfo.image }}" alt="" class="img-circle aboutme-img">
+    <img ng-src="{{ $ctrl.personalinfo.image }}" alt="" class="img-circle aboutme-img">
   </div>
 
   <div class="col-xs-12 col-md-8 aboutme-id">
-    <h1>{{ $ctrl.personalInfo.name }} {{ $ctrl.personalInfo.surname }}</h1>
-    <h3>{{ $ctrl.personalInfo.occupation }}</h3>
+    <h1>{{ $ctrl.personalinfo.name }} {{ $ctrl.personalinfo.surname }}</h1>
+    <h3>{{ $ctrl.personalinfo.occupation }}</h3>
   </div>
 
   <div class="col-xs-12 aboutme-description">
-    <p>{{ $ctrl.personalInfo.bio }}</p>
+    <p>{{ $ctrl.personalinfo.bio }}</p>
   </div>
 </div>

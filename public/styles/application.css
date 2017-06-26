@@ -35,72 +35,101 @@ hr {
   display: none !important; }
 
 /** General Styling for Header and Navbar */
+body {
+  margin-top: 83px; }
+
 header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  font-size: 10px;
   background-color: #212121;
   border-bottom: solid 3px #AC8065; }
   header * {
     background-color: #212121; }
 
+.shrinked {
+  font-size: 10px; }
+
 #header-nav {
-  color: #fff; }
+  margin-bottom: 0; }
   #header-nav a {
     color: #fff; }
   #header-nav > div {
-    padding: 20px; }
-  #header-nav span.fa, #header-nav span.glyphicon {
-    font-size: 2em; }
+    padding: 1.43em; }
 
-.navbar {
-  border: none;
-  margin-bottom: 0; }
-
-#brand-logo {
-  width: 42px;
-  height: 39px;
-  margin: 10px 0 0 20px;
+.brand-logo {
+  width: 3em;
+  height: 2.78em;
+  margin: .71em 0 0 1.43em;
   background: url("../images/court.png") no-repeat;
+  background-size: cover;
   display: inline-block;
   float: left; }
 
-#company-name {
+.company-name {
   display: inline-block;
-  margin: 0 20px; }
-  #company-name h1 {
+  margin: 0 1.43em; }
+  .company-name h1 {
     padding-top: .3em;
     font-size: 1.7em;
     margin: 0; }
 
 .nav > li {
-  /* Small Devices, Tablets */ }
-  @media only screen and (min-width: 768px) {
-    .nav > li {
-      padding: 0 38px 0 0; } }
+  font-size: 1em; }
   .nav > li > a {
-    -webkit-transition: ease 0.3s;
-    -moz-transition: ease 0.3s;
-    -ms-transition: ease 0.3s;
-    -o-transition: ease 0.3s;
-    transition: ease 0.3s;
     border-bottom: transparent solid 3px;
     text-transform: uppercase;
-    text-align: center;
-    margin-right: 10px;
-    padding: 10px 0; }
-    .nav > li > a:hover, .nav > li > a.active {
+    text-align: center; }
+    .nav > li > a:hover {
+      -webkit-transition: ease 0.3s;
+      -moz-transition: ease 0.3s;
+      -ms-transition: ease 0.3s;
+      -o-transition: ease 0.3s;
+      transition: ease 0.3s;
+      background: none;
+      border-bottom-color: #AC8065; }
+    .nav > li > a.active {
       background: none;
       border-bottom-color: #AC8065; }
     .nav > li > a:active, .nav > li > a:focus {
       background: none; }
 
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  body {
+    margin-top: 136px; }
+
+  header {
+    font-size: 16px; }
+
+  .shrinked {
+    font-size: 12px; }
+
+  .nav > li {
+    padding: 0 2.71em 0 0; }
+    .nav > li > a {
+      padding: .71em 0; } }
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  body {
+    margin-top: 96px; } }
 #jumbotron {
-  background: url("../images/jumbotron.png") center no-repeat;
+  background: url("../images/jumbotron.jpg") center no-repeat;
   background-attachment: fixed;
   background-size: cover;
   border-bottom: solid 3px #AC8065; }
 
 #main-description {
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   padding: 20px;
   background: #000;
   /* The Fallback */
@@ -108,6 +137,13 @@ header {
   #main-description p {
     padding: 10px 0; }
 
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  #main-description {
+    margin-top: 200px;
+    margin-bottom: 200px; } }
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
 /* Styling for footer */
 footer.jumbotron {
   background: transparent;
@@ -158,7 +194,7 @@ footer.jumbotron {
 #aboutme {
   padding-top: 100px;
   padding-bottom: 100px;
-  background: url("../images/aboutme.png") center no-repeat;
+  background: url("../images/aboutme.jpg") center no-repeat;
   background-attachment: fixed;
   background-size: cover; }
   #aboutme .row {
@@ -166,15 +202,24 @@ footer.jumbotron {
     /* The Fallback */
     background: rgba(0, 0, 0, 0.5); }
 
+.aboutme-img {
+  max-width: 200px;
+  height: auto;
+  margin-top: 20px; }
 .aboutme-id {
   text-align: center; }
 .aboutme-description {
-  margin-top: 75px;
+  margin-top: 20px;
+  padding-bottom: 20px;
   text-align: justify;
   line-height: 1.5;
   font-size: 1.1em; }
 
 /* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  #aboutme {
+    padding-top: 200px;
+    padding-bottom: 200px; } }
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
   .aboutme-id {
@@ -182,7 +227,7 @@ footer.jumbotron {
     padding-top: 40px; } }
 /* Large Devices, Wide Screens */
 #contact {
-  background: url("../images/contact.png") center no-repeat;
+  background: url("../images/contact.jpg") center no-repeat;
   background-attachment: fixed;
   background-size: cover;
   margin-bottom: 0;

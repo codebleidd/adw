@@ -1,5 +1,6 @@
 var path = require('path');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+var webpack = require('webpack');
 
 config = {
   resolve: {
@@ -19,6 +20,7 @@ config = {
 
   entry: {
     app: './public/src/main.js',
+    appearence: './public/src/appearence.js'
   },
 
   output: {
@@ -45,7 +47,12 @@ config = {
         // and let Webpack Dev Server take care of this
         reload: false
       }
-    )
+    ),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
+    })
   ]
 }
 

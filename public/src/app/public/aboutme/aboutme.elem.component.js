@@ -4,7 +4,7 @@
 var AboutmeElem = {
   template: require('Public/aboutme/aboutme.elem.template.html'),
   bindings: {
-    personalInfo: '<'
+    personalinfo: '<'
   }
 };
 export default AboutmeElem;

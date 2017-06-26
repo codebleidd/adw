@@ -1,7 +1,7 @@
 #aboutme {
   padding-top: 100px;
   padding-bottom: 100px;
-  background: url("../images/aboutme.png") center no-repeat;
+  background: url("../images/aboutme.jpg") center no-repeat;
   background-attachment: fixed;
   background-size: cover;
 
@@ -12,7 +12,9 @@
 
 .aboutme- {
   &img {
-    //vertical-align: ;
+    max-width: 200px;
+    height: auto;
+    margin-top: 20px;
   }
 
   &id {
@@ -20,7 +22,8 @@
   }
 
   &description {
-    margin-top: 75px;
+    margin-top: 20px;
+    padding-bottom: 20px;
     text-align: justify;
     line-height: 1.5;
     font-size: 1.1em;
@@ -28,9 +31,12 @@
 }
 
 /* Small Devices, Tablets */
-//@media only screen and (min-width : 768px) {
-//
-//}
+@media only screen and (min-width : 768px) {
+  #aboutme {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
