@@ -3,3 +3,4 @@
 node_modules/
 public/src/helpers/firebase_config.js
 *.log
+.firebaserc
