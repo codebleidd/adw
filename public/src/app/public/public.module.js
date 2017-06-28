@@ -13,6 +13,7 @@ import DatabaseService from 'Common/database.service.js';
 import PublicCtrl from 'Public/public.controller.js';
 import HomePageCtrl from 'Public/homepage/homepage.controller.js';
 import AboutMeCtrl from 'Public/aboutme/aboutme.controller.js';
+import ContactController from 'Public/contact/contact.controller.js';
 
 /** Components */
 import PageFooter from 'Public/page-footer/page-footer.component.js';
@@ -32,6 +33,7 @@ export default angular.module(moduleName, [uirouter])
   .controller('PublicCtrl', PublicCtrl)
   .controller('HomePageCtrl', HomePageCtrl)
   .controller('AboutMeCtrl', AboutMeCtrl)
+  .controller('ContactController', ContactController)
 
   .component('pageFooter', PageFooter)
   .component('aboutmeElem', AboutmeElem)
@@ -39,11 +41,3 @@ export default angular.module(moduleName, [uirouter])
 
   .config(RoutesConfig)
   .name;
-
-
-
-
-
-
-
-

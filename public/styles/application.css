@@ -8,28 +8,31 @@ body {
   box-sizing: border-box; }
 
 main {
-  border-bottom: 3px solid #AC8065; }
+  border-bottom: 3px solid #1B5E20; }
 
 h2, h3, h4, h5, h6, small {
   font-weight: 700;
   text-transform: uppercase; }
 
 h3, h4 {
-  color: #AC8065;
+  color: #1B5E20;
   font-size: 1.2em; }
 
+p {
+  text-align: justify; }
+
 small {
-  color: #AC8065; }
+  color: #1B5E20; }
 
 hr {
-  color: #AC8065; }
+  color: #1B5E20; }
 
 .fa, .glyphicon {
   font-size: 6rem;
-  color: #AC8065; }
+  color: #1B5E20; }
 
 .icon-bar {
-  background-color: #AC8065; }
+  background-color: #1B5E20; }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
@@ -51,7 +54,7 @@ header {
   transition: 0.2s ease all;
   font-size: 10px;
   background-color: #212121;
-  border-bottom: solid 3px #AC8065; }
+  border-bottom: solid 3px #1B5E20; }
   header * {
     background-color: #212121; }
 
@@ -95,10 +98,10 @@ header {
       -o-transition: ease 0.3s;
       transition: ease 0.3s;
       background: none;
-      border-bottom-color: #AC8065; }
+      border-bottom-color: #1B5E20; }
     .nav > li > a.active {
       background: none;
-      border-bottom-color: #AC8065; }
+      border-bottom-color: #1B5E20; }
     .nav > li > a:active, .nav > li > a:focus {
       background: none; }
 
@@ -121,11 +124,11 @@ header {
 @media only screen and (min-width: 992px) {
   body {
     margin-top: 96px; } }
-#jumbotron {
+#custom-jumbotron {
   background: url("../images/jumbotron.jpg") center no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  border-bottom: solid 3px #AC8065; }
+  border-bottom: solid 3px #1B5E20; }
 
 #main-description {
   margin-top: 100px;
@@ -230,28 +233,39 @@ footer.jumbotron {
   background: url("../images/contact.jpg") center no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  margin-bottom: 0;
-  height: 1000px; }
+  margin-bottom: 0; }
   #contact .row {
     padding: 25px;
+    margin-top: 150px;
+    margin-bottom: 150px;
     background: #000;
     /* The Fallback */
     background: rgba(0, 0, 0, 0.5); }
 
+#form-message-input {
+  width: 100%;
+  min-height: 500px;
+  border: #1B5E20 solid 2px; }
+
+#contact-message {
+  background: transparent;
+  border: #1B5E20 solid 2px;
+  width: 100%; }
+
 .group {
   position: relative;
   margin-bottom: 25px; }
-  .group input {
+  .group input, .group textarea {
     font-size: 16px;
     padding: 5px;
     display: block;
     width: 300px;
     border: none;
-    border-bottom: #AC8065 solid 1px;
+    border-bottom: #1B5E20 solid 2px;
     background: transparent; }
-    .group input:focus {
+    .group input:focus, .group textarea:focus {
       outline: none; }
-    .group input:focus ~ label, .group input:valid ~ label {
+    .group input:focus ~ label, .group input:valid ~ label, .group textarea:focus ~ label, .group textarea:valid ~ label {
       font-size: 12px;
       top: -15px; }
   .group label {
@@ -277,7 +291,7 @@ footer.jumbotron {
       width: 0;
       bottom: 1px;
       position: absolute;
-      background: #AC8065;
+      background: #1B5E20;
       -webkit-transition: 0.2s ease all;
       -moz-transition: 0.2s ease all;
       -ms-transition: 0.2s ease all;
@@ -305,15 +319,30 @@ footer.jumbotron {
   to {
     width: 0;
     background: transparent; } }
+.contact-info {
+  padding-top: 50px;
+  padding-bottom: 30px; }
+
+.form-submit {
+  height: 64px;
+  width: 176px;
+  padding: 6px;
+  float: right;
+  background-color: #1B5E20;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
 .copyright {
-  border-top: 3px solid #AC8065; }
+  border-top: 3px solid #1B5E20; }
   .copyright-text {
     text-align: center;
     font-size: 0.9em;
     padding: 15px; }
     .copyright-text span {
-      color: #AC8065;
+      color: #1B5E20;
       font-size: 1.2em;
       font-weight: 700; }
-
-/*# sourceMappingURL=application.css.map */

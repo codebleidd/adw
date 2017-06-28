@@ -3,25 +3,38 @@
   background-attachment: fixed;
   background-size: cover;
   margin-bottom: 0;
-  height: 1000px;
 
   .row{
     padding: 25px;
+    margin-top: 150px;
+    margin-bottom: 150px;
     @include background-opacity($background_1, 0.5);
   }
 }
-
+// Special styling to message input window
+#form-message-input {
+  width: 100%;
+  min-height: 500px;
+  border: $emphasis solid 2px;
+}
+// text area styling
+#contact-message {
+  background: transparent;
+  border: $emphasis solid 2px;
+  width: 100%;
+}
+// Adding material styling effects to forms
 .group {
   position: relative;
   margin-bottom: 25px;
 
-  input {
+  input, textarea {
     font-size: 16px;
     padding: 5px;
     display: block;
     width: 300px;
     border: none;
-    border-bottom: $emphasis solid 1px;
+    border-bottom: $emphasis solid 2px;
     background: transparent;
 
     &:focus{
@@ -92,4 +105,23 @@
     from  { background:#5264AE; }
     to    { width:0; background:transparent; }
   }
+}
+// Contact information paragraph
+.contact-info {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+// Material design submit button
+.form-submit {
+  height: 64px;
+  width: 176px;
+  padding: 6px;
+  float: right;
+  background-color: $emphasis;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  @include  border-radius(4px);
+
 }

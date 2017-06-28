@@ -48,24 +48,13 @@ function RoutesConfig($stateProvider) {
 
     .state('public.contact', {
       url:'/kontakt',
-      template: require('Public/contact/contact.template.html')
+      template: require('Public/contact/contact.template.html'),
+      controller: 'ContactController as contact',
+      resolve: {
+        contactInfo: ['DatabaseService', function (DatabaseService) {
+          return DatabaseService.getComponents('contact');
+        }]
+      }
     });
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

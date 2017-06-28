@@ -1,38 +1,72 @@
-<main class="jumbotron" id="contact">
+<main id="contact">
   <section class="container">
     <article class="row">
+      <div id="contact-header" class="col-xs-12 col-md-12 text-center">
+        <h2>{{ contact.info.title }}</h2>
+      </div>
 
-      <form action="">
+      <div class="contact-info col-xs-12">
+        <p>{{ contact.info.info }}</p>
+      </div>
 
-        <div class="group">
-          <input type="text" required>
+      <form class="col-xs-12"
+            name="contactForm"
+            id="contact-form"
+            novalidate>
+
+        <div class="group" id="form-name">
+          <input type="text"
+                 ng-model="contact.msg.name"
+                 required>
           <span class="highlight"></span>
           <span class="bar"></span>
-          <label>Imię i nazwisko</label>
+          <label>Imię</label>
         </div>
 
-        <div class="group">
-          <input type="text" required>
+        <div class="group" id="form-surname">
+          <input type="text"
+                 ng-model="contact.msg.surname"
+                 required>
           <span class="highlight"></span>
           <span class="bar"></span>
-          <label>Imię i nazwisko</label>
+          <label>Nazwisko</label>
         </div>
 
-        <div class="group">
-          <input type="text" required>
+        <div class="group" id="form-mail">
+          <input type="email"
+                 name="email"
+                 ng-model="contact.msg.email"
+                 required>
           <span class="highlight"></span>
           <span class="bar"></span>
-          <label>Imię i nazwisko</label>
+          <label>Adres email</label>
         </div>
 
-        <div class="group">
-          <input type="text" required>
+        <div class="group" id="form-message">
+          <textarea id="contact-message"
+                    name="contact-message"
+                    form="contact-form"
+                    rows="8"
+                    ng-model="contact.msg.message"
+                    required></textarea>
           <span class="highlight"></span>
           <span class="bar"></span>
-          <label>Imię i nazwisko</label>
+          <label>Wiadomość</label>
         </div>
 
+        <button class="form-submit"
+                type="submit"
+                ng-disabled="contactForm.$invalid"
+                ng-click="contact.submitForm()"
+                name="send">Wyślij</button>
+        <div class="form-success"
+             ng-show="contact.success">
+          Wiadomość została wysłana
+        </div>
       </form>
+      <!-- <div class="group"> -->
+        <!-- <label for="contact-message">Wiadomość</label> -->
+
     </article>
   </section>
 </main>

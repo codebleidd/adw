@@ -27,4 +27,19 @@ function DatabaseService() {
         console.error('Error occured: ', error);
       });
   };
+
+  service.pushMsgToDatabase = function (name, surname, email, message) {
+    let newMsgKey = firebase.database().ref('/messages/').push().key;
+    let currentDate = new Date();
+    let newMessage = {
+      name: name,
+      surname: surname,
+      email: email,
+      message: message,
+      date: currentDate
+    };
+    let updates = {};
+    updates['messages/' + newMsgKey] = newMessage;
+    firebase.database().ref().update(updates);
+  }
 };

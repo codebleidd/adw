@@ -1,9 +1,10 @@
 //This function is responsible for managing fixed navbar
+import $ from 'jquery';
 var initialPosition = window.pageYOffset;
 
 window.addEventListener('scroll', function (e) {
   var distanceY = window.pageYOffset || document.scrollTop,
-    shrinkDistance = 50
+    shrinkDistance = 50,
     header = $('header');
 
   if (distanceY > shrinkDistance && distanceY > (initialPosition)) {

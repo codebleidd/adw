@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 32);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -80,7 +80,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 
 /***/ }),
 
-/***/ 32:
+/***/ 20:
 /* unknown exports provided */
 /* all exports used */
 /*!**********************************!*\
@@ -88,7 +88,8 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
   \**********************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function($) {//This function is responsible for managing fixed navbar\r\nvar initialPosition = window.pageYOffset;\r\n\r\nwindow.addEventListener('scroll', function (e) {\r\n  var distanceY = window.pageYOffset || document.scrollTop,\r\n    shrinkDistance = 50\r\n    header = $('header');\r\n\r\n  if (distanceY > shrinkDistance && distanceY > (initialPosition)) {\r\n    header.addClass('shrinked');\r\n  }\r\n  else {\r\n    header.removeClass('shrinked');\r\n  }\r\n  initialPosition = distanceY;\r\n});\r\n\r\n$('.nav a').on('click', function () {\r\n  $('.navbar-toggle').click();\r\n});\n/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ 2)))//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMzIuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wdWJsaWMvc3JjL2FwcGVhcmVuY2UuanM/MzA0OCJdLCJzb3VyY2VzQ29udGVudCI6WyIvL1RoaXMgZnVuY3Rpb24gaXMgcmVzcG9uc2libGUgZm9yIG1hbmFnaW5nIGZpeGVkIG5hdmJhclxyXG52YXIgaW5pdGlhbFBvc2l0aW9uID0gd2luZG93LnBhZ2VZT2Zmc2V0O1xyXG5cclxud2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ3Njcm9sbCcsIGZ1bmN0aW9uIChlKSB7XHJcbiAgdmFyIGRpc3RhbmNlWSA9IHdpbmRvdy5wYWdlWU9mZnNldCB8fCBkb2N1bWVudC5zY3JvbGxUb3AsXHJcbiAgICBzaHJpbmtEaXN0YW5jZSA9IDUwXHJcbiAgICBoZWFkZXIgPSAkKCdoZWFkZXInKTtcclxuXHJcbiAgaWYgKGRpc3RhbmNlWSA+IHNocmlua0Rpc3RhbmNlICYmIGRpc3RhbmNlWSA+IChpbml0aWFsUG9zaXRpb24pKSB7XHJcbiAgICBoZWFkZXIuYWRkQ2xhc3MoJ3Nocmlua2VkJyk7XHJcbiAgfVxyXG4gIGVsc2Uge1xyXG4gICAgaGVhZGVyLnJlbW92ZUNsYXNzKCdzaHJpbmtlZCcpO1xyXG4gIH1cclxuICBpbml0aWFsUG9zaXRpb24gPSBkaXN0YW5jZVk7XHJcbn0pO1xyXG5cclxuJCgnLm5hdiBhJykub24oJ2NsaWNrJywgZnVuY3Rpb24gKCkge1xyXG4gICQoJy5uYXZiYXItdG9nZ2xlJykuY2xpY2soKTtcclxufSk7XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9wdWJsaWMvc3JjL2FwcGVhcmVuY2UuanNcbi8vIG1vZHVsZSBpZCA9IDMyXG4vLyBtb2R1bGUgY2h1bmtzID0gMSJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBIiwic291cmNlUm9vdCI6IiJ9");
+"use strict";
+eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ 2);\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar initialPosition = window.pageYOffset; //This function is responsible for managing fixed navbar\n\n\nwindow.addEventListener('scroll', function (e) {\n  var distanceY = window.pageYOffset || document.scrollTop,\n      shrinkDistance = 50,\n      header = (0, _jquery2.default)('header');\n\n  if (distanceY > shrinkDistance && distanceY > initialPosition) {\n    header.addClass('shrinked');\n  } else {\n    header.removeClass('shrinked');\n  }\n  initialPosition = distanceY;\n});\n\n(0, _jquery2.default)('.nav a').on('click', function () {\n  (0, _jquery2.default)('.navbar-toggle').click();\n});//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjAuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vcHVibGljL3NyYy9hcHBlYXJlbmNlLmpzP2U1ZTEiXSwic291cmNlc0NvbnRlbnQiOlsiLy9UaGlzIGZ1bmN0aW9uIGlzIHJlc3BvbnNpYmxlIGZvciBtYW5hZ2luZyBmaXhlZCBuYXZiYXJcclxuaW1wb3J0ICQgZnJvbSAnanF1ZXJ5JztcclxudmFyIGluaXRpYWxQb3NpdGlvbiA9IHdpbmRvdy5wYWdlWU9mZnNldDtcclxuXHJcbndpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdzY3JvbGwnLCBmdW5jdGlvbiAoZSkge1xyXG4gIHZhciBkaXN0YW5jZVkgPSB3aW5kb3cucGFnZVlPZmZzZXQgfHwgZG9jdW1lbnQuc2Nyb2xsVG9wLFxyXG4gICAgc2hyaW5rRGlzdGFuY2UgPSA1MCxcclxuICAgIGhlYWRlciA9ICQoJ2hlYWRlcicpO1xyXG5cclxuICBpZiAoZGlzdGFuY2VZID4gc2hyaW5rRGlzdGFuY2UgJiYgZGlzdGFuY2VZID4gKGluaXRpYWxQb3NpdGlvbikpIHtcclxuICAgIGhlYWRlci5hZGRDbGFzcygnc2hyaW5rZWQnKTtcclxuICB9XHJcbiAgZWxzZSB7XHJcbiAgICBoZWFkZXIucmVtb3ZlQ2xhc3MoJ3Nocmlua2VkJyk7XHJcbiAgfVxyXG4gIGluaXRpYWxQb3NpdGlvbiA9IGRpc3RhbmNlWTtcclxufSk7XHJcblxyXG4kKCcubmF2IGEnKS5vbignY2xpY2snLCBmdW5jdGlvbiAoKSB7XHJcbiAgJCgnLm5hdmJhci10b2dnbGUnKS5jbGljaygpO1xyXG59KTtcclxuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHB1YmxpYy9zcmMvYXBwZWFyZW5jZS5qcyJdLCJtYXBwaW5ncyI6Ijs7QUFDQTtBQUNBOzs7OztBQUFBO0FBQ0E7QUFDQTtBQUFBO0FBQ0E7QUFBQTtBQUFBO0FBQ0E7QUFHQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9");
 
 /***/ })
 

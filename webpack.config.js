@@ -14,7 +14,18 @@ config = {
 
   module: {
     rules: [
-      {test:/\.html$/, use: 'html-loader'}
+      {test:/\.html$/, use: 'html-loader'},
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env'],
+            plugins: [require('babel-plugin-transform-object-rest-spread')]
+          }
+        }
+      }
     ]
   },
 
@@ -36,7 +47,7 @@ config = {
         host: 'localhost',
         port: 3000,
         server: { baseDir: ['public']},
-          // proxy the Webpack Dev Server endpoint
+        // proxy the Webpack Dev Server endpoint
         // (which should be serving on http://localhost:3100/)
         // through BrowserSync
         // proxy: 'http://localhost:3100/'
@@ -45,7 +56,7 @@ config = {
       {
         // prevent BrowserSync from reloading the page
         // and let Webpack Dev Server take care of this
-        reload: false
+        reload: true
       }
     ),
     new webpack.ProvidePlugin({
